@@ -27,7 +27,7 @@ jobs:
           pip cache purge
           rm -rf ~/.cache/pip
           pip install --upgrade pip setuptools wheel --force-reinstall --no-cache-dir
-          pip install --no-cache-dir .
+          pip install --no-use-pep517 --no-cache-dir .
           pip install --no-cache-dir pytest
 
       - name: Run tests
